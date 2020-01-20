@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONCRETE CHECKLIST FORM</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="./src/checklist.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css">
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<div class="row">
+  <div class="ribbon"></div>
+  <main class="pdf-body">
+    <div class="card-container">
+      <div class="card-content card-panel col s12 m8 offset-m2">
+        <form id="checklist" action="javascript:;">
+          <div class="row">
+            <h1 id="title">CONCRETE CHECKLIST FORM</h1>
+            <p id="description">PDF Checklist Generator</p>
+          </div>
+          
+          <div class="row question-section">
+            <h5>GENERAL CONCRETE REINFOCEMENT INSPECTION</h5>
+            <div id="checklist" class="col s12">
+							<div class="question">
+								<p>Extend of the inspection:</p>
+              	<div class="input-field input-field-textarea">
+                	<textarea id="extend-of-the-inspection" class="textarea materialize-textarea" placeholder="ADD CAPTION"></textarea>
+              	</div>
+							</div>
+							
+							<div class="question">
+              	<p>Sand binding laid</p>
+              	<div>
+                	<input name="sand-binding-laid" type="radio" id="sand-binding-laid0" value="YES" />
+                	<label for="sand-binding-laid0">YES</label>
+              	</div>
+              	<div>
+                	<input name="sand-binding-laid" type="radio" id="sand-binding-laid1" value="NO" />
+                	<label for="sand-binding-laid1">NO</label>
+              	</div>
+              	<div id="other-input">
+                	<input name="sand-binding-laid" type="radio" id="sand-binding-laid2" value="OTHER" />
+                	<label for="sand-binding-laid2" class="other">
+                  	<div class="input-field input-field-textarea">
+											<textarea id="sand-binding-laid2" class="textarea materialize-textarea other-textarea" placeholder="OTHER"></textarea>
+                  	</div>
+                	</label>
+									<div class="imgs">
+										img
+									</div>
+              	</div>
+							</div>
+							
+							<div class="question">
+								<p>Thickness of sand binding laid</p>
+              	<div>
+                	<input name="thichness-of-sand-bining-laid" type="radio" id="thichness-of-sand-bining-laid0" value="20" />
+                	<label for="thichness-of-sand-bining-laid0">20</label>
+              	</div>
+              	<div>
+                	<input name="thichness-of-sand-bining-laid" type="radio" id="thichness-of-sand-bining-laid1" value="30" />
+                	<label for="thichness-of-sand-bining-laid1">30</label>
+              	</div>
+								<div>
+                	<input name="thichness-of-sand-bining-laid" type="radio" id="thichness-of-sand-bining-laid2" value="50" />
+                	<label for="thichness-of-sand-bining-laid2">50</label>
+              	</div>
+              	<div id="other-input">
+                	<input name="thichness-of-sand-bining-laid" type="radio" id="thichness-of-sand-bining-laid3" value="OTHER" />
+                	<label for="thichness-of-sand-bining-laid3" class="other">
+                  	<div class="input-field input-field-textarea">
+											<textarea id="thichness-of-sand-bining-laid3" class="textarea materialize-textarea other-textarea" placeholder="OTHER"></textarea>
+                  	</div>
+                	</label>
+									<div class="imgs">
+										img
+									</div>
+              	</div>
+							</div>
+							
+						</div>
+					</div>
+					
+          <div class="row question-section">
+						<!--
+            <h5 class="heading-after">User Agreement</h5>
+            <div id="agreement" class="col s12">
+              <div>
+                <input type="checkbox" class="filled-in" id="filled-in-box0" value="0"/>
+                <label for="filled-in-box0">I agree to the <a href="https://www.freecodecamp.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://www.freecodecamp.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></label>
+              </div>
+              <div>
+                <input type="checkbox" class="filled-in" id="filled-in-box1" checked="checked" value="1"/>
+                <label for="filled-in-box1">Send me free email updates</label>
+              </div>
+							-->
+              <button id="submit" class="btn waves-effect waves-light" type="submit" form="checklist">Submit</button>
+            </div>
+          </div>
+					
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+<footer>
+  <a href="#" target="_blank"></a>
+</footer>
+</html>
