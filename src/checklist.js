@@ -17,14 +17,15 @@ $(document).ready(function(){
   });
   
   $(".other-textarea").bind("input propertychange", function(){
-      $(this).closest("#other-input").find("input").val($(this).val());
+      $(this).closest("#other-input").first("input").val($(this).val());
   });
   
   // upload image
+  /*
   $(".img").click(function(){
     $(this).closest("div").find(".img-input").trigger("click");
   });
-  
+  */
   $(document).on("change",".img-input", function(e){
     var img = e.target.files[0];
     if(img){
