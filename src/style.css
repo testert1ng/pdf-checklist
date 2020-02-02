@@ -6,12 +6,12 @@ body {
 }
 
 .input-field input[type=text]:focus + label, .input-field input[type=number]:focus + label, .input-field input[type=email]:focus + label {
-  color: #607D8B;
+  color: #19D3A1;
 }
 
 .input-field input[type=text]:focus, .input-field input[type=number]:focus, input[type=number]:focus.valid, .input-field input[type=email]:focus, input[type=email]:focus.valid, .input-field textarea[class=materialize-textarea]:focus {
-  border-bottom: 1px solid #607D8B;
-  box-shadow: 0 1px 0 0 #607D8B;
+  border-bottom: 1px solid #19D3A1;
+  box-shadow: 0 1px 0 0 #19D3A1;
 }
 
 input[type=number].valid, input[type=email].valid {
@@ -20,7 +20,7 @@ input[type=number].valid, input[type=email].valid {
 }
 
 .dropdown-content li > span {
-  color: #607D8B;
+  color: #19D3A1;
 }
 
 .select-dropdown {
@@ -43,8 +43,8 @@ select {
 }
 
 [type="radio"]:checked + label:after {
-  border: 2px solid #607D8B;
-  background-color: #607D8B;
+  border: 2px solid #19D3A1;
+  background-color: #19D3A1;
 }
 
 [type="checkbox"].filled-in:checked + label:before {
@@ -53,8 +53,8 @@ select {
 }
 
 [type="checkbox"].filled-in:checked + label:after {
-  border: 2px solid #607D8B;
-  background-color: #607D8B;
+  border: 2px solid #19D3A1;
+  background-color: #19D3A1;
   margin: 2px;
 }
 
@@ -101,7 +101,7 @@ main .card-container .card-content {
 }
 main .card-container .card-content form #title {
   font-size: 1.75rem;
-  margin: 1.5rem 0 0 0.75rem;
+  margin: 1rem 0 0 0.75rem;
 }
 main .card-container .card-content form #description {
   font-size: 13px;
@@ -112,7 +112,7 @@ main .card-container .card-content form #description {
 main .card-container .card-content form h5 {
   color: #19D3A1;
   font-size: 1.2rem;
-  margin: 1.5rem 0.75rem 0 0.75rem;
+  margin: 1.5rem 0.75rem 1rem 0.75rem;
   border-bottom: 2px solid #19D3A1;
 }
 main .card-container .card-content form .heading1 {
@@ -131,11 +131,10 @@ main .card-container .card-content form #checklist .input-field-number, main .ca
   margin: 0 0 0 4px;
 }
 main .card-container .card-content form #agreement a {
-  color: #607D8B;
+  color: #19D3A1;
   text-decoration: underline;
 }
 main .card-container .card-content form p {
-  margin-top: 1.25rem;
   margin-bottom: 0.25rem;
 }
 main .card-container .card-content form .paragraph1 {
@@ -241,4 +240,16 @@ footer a .fa-lg {
   line-height: 1.5rem;
   background-color: rgba(255,255,255,0.5);
   cursor: pointer;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+input[type="text"] {
+  margin: 0 0 0 0;
+}
+
+.title p {
+  margin: 0.75rem 0 0 0;
 }
