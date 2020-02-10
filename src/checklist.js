@@ -1,3 +1,8 @@
+function getDateStr(){
+  var date = new Date();
+  return date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() + 1 ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2);      
+}
+
 $(document).ready(function(){
   // selection control
   $("input:radio").change(function(){
@@ -46,10 +51,9 @@ $(document).ready(function(){
     $(this).parent().remove();
   });
   
-  
   // generate pdf
   $("#submit").click(function(){
-    var doc = new jsPDF("p", "pt", "letter"),
+    var doc = new jsPDF("p", "pt", "a4"),
         source = $(".pdf-body")[0],
         margins = {
           top: 40,
@@ -68,7 +72,7 @@ $(document).ready(function(){
       function(dispose) {
         // dispose: object with X, Y of the last line add to the PDF
         //          this allow the insertion of new lines after html
-        doc.save("Test.pdf");
+        doc.save("concrete" + getDateStr() + ".pdf");
       },
       margins
     );
