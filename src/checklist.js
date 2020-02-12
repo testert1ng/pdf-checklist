@@ -53,6 +53,7 @@ $(document).ready(function(){
   
   // generate pdf
   $("#submit").click(function(){
+    /*
     var doc = new jsPDF("p", "pt", "a4"),
         source = $(".pdf-body")[0],
         margins = {
@@ -76,20 +77,22 @@ $(document).ready(function(){
       },
       margins
     );
-    /*
-    var pdf = new jsPDF("p", "mm", "a4");
+    */
+    var pdf = new jsPDF("p", "pt", "a4");
     var filename = "concrete" + getDateStr() + ".pdf";
-    html2canvas($(".row")[0], {
+    html2canvas($(".card-content")[0], {
       onrendered: function(canvas) {
-        var imgData = canvas.toDataURL("image/png", 2);
+        var imgData = canvas.toDataURL("image/png");
         var width = canvas.width;
-        var height = canvas.clientHeight;
+        var height = canvas.height;
+        console.log(width + ':' + height);
         pdf.addImage(imgData, 'PNG', 0, 0, width, height);
+        pdf.save(filename);
       }
     });
 
-    pdf.save(filename);
-    */
+    
+    
   });
 });
 
