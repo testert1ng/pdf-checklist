@@ -76,6 +76,20 @@ $(document).ready(function(){
       },
       margins
     );
+    /*
+    var pdf = new jsPDF("p", "mm", "a4");
+    var filename = "concrete" + getDateStr() + ".pdf";
+    html2canvas($(".row")[0], {
+      onrendered: function(canvas) {
+        var imgData = canvas.toDataURL("image/png", 2);
+        var width = canvas.width;
+        var height = canvas.clientHeight;
+        pdf.addImage(imgData, 'PNG', 0, 0, width, height);
+      }
+    });
+
+    pdf.save(filename);
+    */
   });
 });
 
